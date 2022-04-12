@@ -1,0 +1,289 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+*{
+    margin:0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.prueba{
+    font-size: 500px;
+}
+
+/*General*/
+
+.alignRow{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    gap:3px;
+}
+
+.alignRow7{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    gap:7px;
+}
+
+.alignRowN{
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: row nowrap;
+    gap:3px;
+}
+
+.alignRowNCenter{
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: row nowrap;
+    gap:3px;
+}
+
+.leyenda{
+    font-weight:600;
+}
+
+.imageResponsive{
+    max-width: 100%;
+    height: auto;
+    width:62px;
+}
+
+.textCenter{
+    text-align: center;
+}
+
+/*Students*/
+
+.headC{
+    padding:10px;
+    display:flex;
+}
+
+.head{
+    border-radius:5px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.658);
+    padding:15px;
+}
+
+.alignRowMenu{
+    display: grid;
+}
+
+#titleMenu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    grid-area: titleM;
+    text-align: center;
+}
+
+#buttonsMenu{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: row wrap;
+    gap:7px;
+    grid-area: buttonsM;
+}
+
+@media(min-width:700px){
+    .alignRowMenu{
+        grid-template-columns: 1fr 3fr;
+        grid-template-areas: 
+            "titleM buttonsM";
+    }
+
+    #titleMenu{
+        justify-content: flex-start;
+        border-right: 1px solid gray;
+    }
+
+}
+
+@media(max-width:700px){
+    .alignRowMenu{
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+            "titleM" 
+            "buttonsM";
+    }
+    #titleMenu{
+        border-bottom: 1px solid gray;
+    }
+}
+
+@media(width:700px){
+    .alignRowMenu{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "titleM buttonsM";
+    }
+    #titleMenu{
+        border-right: 1px solid gray;
+        border-bottom: 0;
+    }
+}
+
+/*Add Student*/
+
+.contentAdd{
+    margin:5px 0 0 0;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.586);
+    border-radius:5px;
+    padding:10px;
+}
+
+.titleAddStudent{
+    grid-area: titleAdd;
+    padding:2px;
+    display:flex;
+    justify-items: center;
+    justify-content: flex-start;
+    flex-flow: row wrap;
+}
+
+.personalD{
+    padding:5px;
+    grid-area: personalData;
+    display: flex;
+    justify-items: center;
+    justify-content: flex-start;
+    flex-flow: row wrap;
+    gap:15px;
+}
+
+.systemD{
+    padding:5px;
+    grid-area: systemData;
+    display: flex;
+    justify-items: center;
+    justify-content: flex-start;
+    flex-flow:row wrap;
+    gap:15px;
+}
+
+.buttonData{
+    padding:5px;
+    grid-area:btnSubmit;
+}
+
+.response{
+    grid-area: response;
+}
+
+.alignForm{
+    display:grid;
+    grid-template-areas:
+        "response"
+        "titleAdd"
+        "personalData"
+        "systemData"
+        "btnSubmit";
+    grid-template-rows: auto auto auto auto;
+}
+
+.buttonAlign{
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media(max-width:700px){
+    .personalD{
+        justify-content: space-evenly;
+    }
+    .systemD{
+        justify-content: space-evenly;
+    }
+    .titleAddStudent{
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+/*Delete Student*/
+
+.contentTableDeleteS{
+}
+
+.table{
+    text-align: center;
+}
+
+.table > th{
+    text-align: center;
+}
+
+.alignTitle{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: row nowrap;
+
+}
+
+/*Search Student*/
+
+.titleSearch{
+    grid-area: titleSearch;
+}
+
+.contentSearch{
+    grid-area: contentSearch;
+    margin-top: 5px;
+}
+
+
+.contentSearchStudent{
+    display: grid;
+    grid-template-areas: 
+        "titleSearch"
+        "contentSearch";
+}
+
+/*Modal Students*/
+.alignColumn{
+    display:flex;
+    justify-content: flex-start;
+    flex-flow: column nowrap;
+    gap:5px;
+}
+
+.editBodyH{
+    padding:5px;
+}
+.editBodyC{
+    padding:5px;
+}
+
+.asignature{
+    padding:7px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px gray;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow:row wrap;
+    gap:4px;
+}
+
+.fixButton{
+    padding:3px 5px 3px 5px;
+}
+.fixButtonsm{
+    padding:0 3px 0 3px;
+}
+.fixIcon{
+    padding: 0;
+    margin:0;
+}
+
+.card{
+    box-shadow: 0 0 2px gray;
+}
+
+

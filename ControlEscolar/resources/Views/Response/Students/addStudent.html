@@ -1,0 +1,59 @@
+﻿<div class="form-group alignForm">
+
+    <!--Response-->
+    <div class="alert response" id="responseAddStudent" role="alert" style="display: none;">
+        
+    </div>
+
+    <!--Title-->
+    <div class="titleAddStudent">
+        <div>
+            <i class="btn btn-default fas fa-plus fa-lg"></i>
+        </div>
+        <span class="h4 leyenda">Alta de Alumnos</span>
+    </div>
+
+    <!--Personal data-->
+    <div class="personalD">
+        <!--Name-->
+        <div>
+            <label for="nameStudent" class="leyenda">Nombre(s):</label>
+            <input type="text" class="form-control" name="nameStudent" id="nameStudent" placeholder="Nombre del estudiante" onchange="checkText(),checkDisabledButton()" required>
+        </div>
+        <!--Last Name 1-->
+        <div>
+            <label for="lastNameStudent1" class="leyenda">Apellido Paterno:</label>
+            <input type="text" class="form-control" name="lastNameStudent1" id="lastNameStudent1" placeholder="Primer Apellido" onchange="checkText(),checkDisabledButton()" required>
+        </div>
+        <!--Last Name 2-->
+        <div>
+            <label for="lastNameStudent2" class="leyenda">Apellido Materno:</label>
+            <input type="text" class="form-control" name="lastNameStudent2" id="lastNameStudent2" placeholder="Segundo Apellido">
+        </div>
+    </div>
+
+    <!--System data-->
+    <div class="systemD">
+        <!--User-->
+        <div>
+            <label for="userStudent" class="leyenda">Usuario:</label>
+            <input type="text" class="form-control" name="userStudent" id="userStudent" onchange="checkDisabledButton()" readonly> 
+        </div>
+        <!--Password-->
+        <div>
+            <label for="reloadPassword" class="leyenda">Contraseña:</label>
+            <div class="input-group">
+                <input type="text" class="form-control" id="studentPassword" onchange="checkDisabledButton()" readonly>
+                <div class="input-group-append">
+                  <button class="btn btn-warning" type="button" id="reloadPassword" onclick="generatePassword()"><i class="fas fa-plus"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Submit-->
+    <div class="buttonData buttonAlign">        
+        <button class="btn btn-info" id="btnSubStu" onclick="fetchAddStudent()" disabled><i class="fas fa-plus" style="margin-right: 4px;"></i>Agregar</button>
+    </div>
+
+</div>

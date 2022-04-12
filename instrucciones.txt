@@ -1,0 +1,25 @@
+/*Version PHP 7.4 */
+
+Usuario por defecto
+
+Usuario: a.admin58
+Contraseña: 8R266H8A
+
+*Base de Datos
+
+	*SQL-SERVER
+
+Cambiar el archivo dentro de la carpeta ControlEscolar/Data/config.php para cambiar el servidor y la contraseña para la base de datos
+
+*Si marca error en el PDO falta agregar las librerias al servidor, estas ya viene en la carpeta de herramientas por si necesita instalarlas:
+
+	1.- Copiar las dll en la carpeta "ext" de la carpeta "php" del servidor;
+	2.- Acceder al archivo "php.ini" del servidor y activar las extensiones de PDO y agregar las extensiones de las dll copiadas, solo ocupar
+		las extensiones de acuerdo a tu arquitectura, son 2 de sqlsrv y 2 de PDOsqlsrv, en total deben ser 4. 
+	3.- Reiniciar el servidor.
+
+
+
+*En la carpeta de herramientas viene el script utilizado para crear la B.D., las dll por si son necesarias y la backup de la base de datos.
+
+*Para acceder al programa entrar a la Carpeta "ControlEscolar" desde el servidor web
